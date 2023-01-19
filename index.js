@@ -9,7 +9,7 @@ function addNewStore(stores, store) {
   stores.push(store)
   
   return stores
-}
+};
 
 /**
  * Removes a store object at the given position.
@@ -21,7 +21,7 @@ function removeStoreAtPosition(stores, index) {
   stores.splice(index, 1)
   
   return stores
-}
+};
 
 /**
  * Creates a duplicate of the `store` object. No references should be shared between the inputted `store` and the result.
@@ -29,7 +29,12 @@ function removeStoreAtPosition(stores, index) {
  * @returns {Object} The duplicated store object. This should not be the same as the store that was inputted.
  */
 function duplicateStore(store) {
-}
+let sameObject = { ...store}
+
+sameObject.boardGames = [...store.boardGames]
+sameObject.address = {...store.address}
+return sameObject
+};
 
 module.exports = {
   addNewStore,
