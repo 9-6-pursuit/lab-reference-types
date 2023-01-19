@@ -18,7 +18,9 @@ function addNewStore(stores, store) {
  * @returns {Object[]} The same `stores` array that was inputted.
  */
 function removeStoreAtPosition(stores, index) {
-
+  stores.splice(index, 1)
+  
+  return stores
 }
 
 /**
