@@ -18,18 +18,33 @@ function addNewStore(stores, store) {
  * @returns {Object[]} The same `stores` array that was inputted.
  */
 function removeStoreAtPosition(stores, index) {
-let storeAtPosition = []
-stores.pop()
-return stores
-
+  store.splice( index, 1)
+  return strores
 }
+
+
+    /**
+    @@ -31,8 +29,8 @@ function removeStoreAtPosition(stores, index) {
+     * @returns {Object} The duplicated store object. This should not be the same as the store that was inputted.
+     */
+    function duplicateStore(store) {
+    const newStore = store.slice(0)
+    return newStore
+    }
+
+
+
+
+
+
 /**
  * Creates a duplicate of the `store` object. No references should be shared between the inputted `store` and the result.
  * @param {Object} store - An object representing a single store. See the instructions for details on its shape.
  * @returns {Object} The duplicated store object. This should not be the same as the store that was inputted.
  */
 function duplicateStore(store) {
-
+let newStore = JSON.parse(JSON.stringify(store))
+  return newStore
 }
 
 
