@@ -17,12 +17,10 @@ return stores
  * @returns {Object[]} The same `stores` array that was inputted.
  */
 function removeStoreAtPosition(stores, index) {
-  for (let i = 0; i < stores.length; i++) {
-    //const element = stores[i];
-    // stores.slice(store[index])
-    delete stores[index]
-  }
-  return stores
+  //for (let i = 0; i < stores.length; i++) {
+    stores.splice(index, 1);
+  return stores;
+
 }
 
 /**
@@ -31,8 +29,8 @@ function removeStoreAtPosition(stores, index) {
  * @returns {Object} The duplicated store object. This should not be the same as the store that was inputted.
  */
 function duplicateStore(store) {
-const newstore = store.slice(0)
-return newstore
+  let newStore = JSON.parse(JSON.stringify(store))
+  return newStore
 }
 
 module.exports = {
