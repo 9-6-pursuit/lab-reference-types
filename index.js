@@ -21,6 +21,9 @@ function removeStoreAtPosition(stores, index) {}
  */
 function duplicateStore(store) {}
 
+
+
+
 module.exports = {
   addNewStore,
   removeStoreAtPosition,
