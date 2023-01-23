@@ -36,27 +36,28 @@ function removeStoreAtPosition(stores, index) {
  */
 
 function duplicateStore(store) {
-      let duplicateStore = store
-      //return duplicateStore
+      // let duplicateStore = store
+      // //return duplicateStore
 
-       let copied1 = JSON.parse(JSON.stringify(store));
+      //  let copied1 = JSON.parse(JSON.stringify(store));
 
-      // copied.boardGames = 'Jane'; // disconnected
+      // // copied.boardGames = 'Jane'; // disconnected
       
-      // copied.address.street = 'Amphitheatre Parkway';
-      // copied.address.city = 'Mountain View';
+      // // copied.address.street = 'Amphitheatre Parkway';
+      // // copied.address.city = 'Mountain View';
+      
+      // // return duplicateStore
+
+      // let copied = Object.assign({}, store);
+
+      // // copied.boardGames = 'Jane'; // disconnected
+      
+      // // copiedPerson.address.street = 'Amphitheatre Parkway'; // connected
+      // // copiedPerson.address.city = 'Mountain View'; // connected
       
       // return duplicateStore
-
-      let copied = Object.assign({}, store);
-
-      // copied.boardGames = 'Jane'; // disconnected
-      
-      // copiedPerson.address.street = 'Amphitheatre Parkway'; // connected
-      // copiedPerson.address.city = 'Mountain View'; // connected
-      
-      return duplicateStore
-
+      const newObj = JSON.parse(JSON.stringify(store))
+      return newObj
 
 }
 
