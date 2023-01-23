@@ -4,7 +4,11 @@
  * @param {Object} store - An object representing a single store. See the instructions for details on its shape.
  * @returns {Object[]} The same `stores` array that was inputted.
  */
-function addNewStore(stores, store) {}
+function addNewStore(stores, store) {
+      let addNewStore = stores.push(store)
+      return stores 
+
+}
 
 /**
  * Removes a store object at the given position.
@@ -12,14 +16,52 @@ function addNewStore(stores, store) {}
  * @param {number} index - A number representing the index of the store to be removed from the array.
  * @returns {Object[]} The same `stores` array that was inputted.
  */
-function removeStoreAtPosition(stores, index) {}
+// function removeStoreAtPosition(stores, index) {
+//       let removeStoreAtPosition = stores.splice(0,stores)
+
+//       return stores
+
+// }
+
+
+function removeStoreAtPosition(stores, index) {
+    stores.splice(index,1)
+    return stores
+}
 
 /**
  * Creates a duplicate of the `store` object. No references should be shared between the inputted `store` and the result.
  * @param {Object} store - An object representing a single store. See the instructions for details on its shape.
  * @returns {Object} The duplicated store object. This should not be the same as the store that was inputted.
  */
-function duplicateStore(store) {}
+
+function duplicateStore(store) {
+      // let duplicateStore = store
+      // //return duplicateStore
+
+      //  let copied1 = JSON.parse(JSON.stringify(store));
+
+      // // copied.boardGames = 'Jane'; // disconnected
+      
+      // // copied.address.street = 'Amphitheatre Parkway';
+      // // copied.address.city = 'Mountain View';
+      
+      // // return duplicateStore
+
+      // let copied = Object.assign({}, store);
+
+      // // copied.boardGames = 'Jane'; // disconnected
+      
+      // // copiedPerson.address.street = 'Amphitheatre Parkway'; // connected
+      // // copiedPerson.address.city = 'Mountain View'; // connected
+      
+      // return duplicateStore
+      const newObj = JSON.parse(JSON.stringify(store))
+      return newObj
+
+}
+
+
 
 module.exports = {
   addNewStore,
